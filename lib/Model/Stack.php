@@ -12,7 +12,7 @@ class Stack implements StackInterface {
 
     public function push($data)
     {
-        array_unshift($this->stack, $data);
+        $this->stack[] = $data;
     }
 
     public function pop()
@@ -20,12 +20,12 @@ class Stack implements StackInterface {
         if($this->isEmpty()){
             throw new \RunTimeException('Stack is empty!');
         }
-        return array_shift($this->stack);
+        return array_pop($this->stack);
     }
 
     public function top()
     {
-        return current($this->stack);
+        return end($this->stack);
     }
 
     public function isEmpty()

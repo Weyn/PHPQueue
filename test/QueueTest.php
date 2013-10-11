@@ -99,7 +99,6 @@ class QueueTest extends \PHPUnit_Framework_TestCase {
             //$this->assertEquals($queue->dequeue(), $i);
         }
         $total = microtime(true) - $start;
-        $avg = $total / $dataSize;
 
         echo sprintf("Time spend while pushing and poping %s element/s: %s s\n", $dataSize, round($total , 5));
 
@@ -108,11 +107,11 @@ class QueueTest extends \PHPUnit_Framework_TestCase {
     public function dataSizeProvider()
     {
         return array(
-            array(1),
             array(10),
             array(100),
             array(1000),
             array(10000),
+            array(100000),
         );
     }
 
