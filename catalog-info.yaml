@@ -4,7 +4,8 @@ metadata:
   name: PhpQueue
   description: Test definition for Backstage teamcity plugin development.
   # Example for optional annotations
-  # annotations:
+  annotations:
+    teamcity/project-id: PHPQueue
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
 spec:
